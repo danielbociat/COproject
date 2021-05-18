@@ -7,10 +7,29 @@ public class CPUFixedVsFloatingPoint implements IBenchmark {
 
 	private double result;
 	private int size;
+	private IBenchmark benchmark;
 
 	@Override
 	public void initialize(Object ... params) {
-		this.size = (Integer)params[0];	
+		this.size = (Integer)params[0];
+
+		switch ((NumberRepresentation) params[1]) {
+			case PI:
+				benchmark = new PiSpigot(size);
+				benchmark.initialize();
+				break;
+
+			case E:
+				benchmark = new DigitsOfE(size);
+				benchmark.initialize();
+
+				break;
+
+
+			default:
+				break;
+		}
+
 	}
 
 	@Override
@@ -24,22 +43,15 @@ public class CPUFixedVsFloatingPoint implements IBenchmark {
 	@Override
 	@Deprecated	
 	public void run() {
+		benchmark.run();
+
 	}
 
 	@Override
 	public void run(Object ...options) {
 		result = 0;
 
-		PiSpigot num = new PiSpigot(size);
 
-		switch ((NumberRepresentation) options[0]) {
-			case PI:
-				num.run();
-				break;
-
-			default:
-				break;
-		}
 
 	}
 	

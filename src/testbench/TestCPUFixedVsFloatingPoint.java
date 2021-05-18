@@ -19,18 +19,15 @@ public class TestCPUFixedVsFloatingPoint {
 		TimeUnit timeUnit = TimeUnit.Milli;
 
 		IBenchmark bench = new CPUFixedVsFloatingPoint();
-		bench.initialize(10000);
+		bench.initialize(1000, NumberRepresentation.PI);
 		bench.warmUp();
 
 		timer.start();
-//		bench.run(NumberRepresentation.FIXED);
-//		bench.run(NumberRepresentation.FLOATING);
 
-		bench.run(NumberRepresentation.PI);
+		bench.run();
 
 		long time = timer.stop();
 		log.writeTime("Finished in", time, timeUnit);
-//		log.write("Result is", bench.getResult());
 
 		bench.clean();
 		log.close();

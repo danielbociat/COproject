@@ -1,6 +1,8 @@
 package bench.cpu;
 
-public class PiSpigot {
+import bench.IBenchmark;
+
+public class PiSpigot implements IBenchmark {
     private int digits_requested;
     private int[] digits;
     private StringBuilder predigits = new StringBuilder();
@@ -58,27 +60,23 @@ public class PiSpigot {
 
 
     // Allocate digits[]
-    public boolean init() {
+    @Override
+    public void initialize(Object... params) {
         int array_size_needed = digits_requested * 10 / 3 + 1;
         digits = new int[array_size_needed];
-        if (digits == null) {
-            System.err.printf("Failed to allocate " + (array_size_needed*4)
-                    + " bytes.");
-            return false;
-        }
-
         // fill each digit with a 2
         for (int i=0; i < digits.length; i++)
             digits[i] = 2;
+    }
+    @Override
+    public void warmUp() {
 
-        return true;
     }
 
 
     // Produce digits
-    void run() {
-        if (!init()) return;
-
+    @Override
+    public void run() {
         for (int iter = 0; iter < digits_requested; iter++) {
 
             // Work backwards through the array, multiplying each digit by 10,
@@ -114,6 +112,26 @@ public class PiSpigot {
         }
         flushDigits();
         System.out.println();
+    }
+
+    @Override
+    public void run(Object... options) {
+
+    }
+
+    @Override
+    public void cancel() {
+
+    }
+
+    @Override
+    public void clean() {
+
+    }
+
+    @Override
+    public String getResult() {
+        return null;
     }
 
 
