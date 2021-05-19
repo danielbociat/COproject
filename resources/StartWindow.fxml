@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uiControllers.StartController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uiControllers.StartController">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
          <children>
@@ -28,17 +25,17 @@
                   <Font name="Bradley Hand ITC" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="exitButton1" alignment="CENTER" layoutX="10.0" layoutY="259.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FF9999;" text="φ">
+            <Button fx:id="phiButton" alignment="CENTER" layoutX="10.0" layoutY="259.0" mnemonicParsing="false" onAction="#phiButtonOnAction" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FF9999;" text="φ">
                <font>
                   <Font name="Bradley Hand ITC" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="exitButton2" alignment="CENTER" layoutX="10.0" layoutY="191.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FF9999;" text="π">
+            <Button fx:id="piButton" alignment="CENTER" layoutX="10.0" layoutY="191.0" mnemonicParsing="false" onAction="#piButtonOnAction" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FF9999;" text="π">
                <font>
                   <Font name="Bradley Hand ITC" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="exitButton21" alignment="CENTER" layoutX="10.0" layoutY="122.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FF9999;" text="e">
+            <Button fx:id="eButton" alignment="CENTER" layoutX="10.0" layoutY="122.0" mnemonicParsing="false" onAction="#eButtonOnAction" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FF9999;" text="e">
                <font>
                   <Font name="Times New Roman" size="28.0" />
                </font>

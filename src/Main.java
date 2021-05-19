@@ -19,7 +19,7 @@ public class Main extends Application {
             Parent start_layout = FXMLLoader.load(resource);
             //noinspection SpellCheckingInspection
             primaryStage.setTitle("Uwuntu App");
-            primaryStage.setScene(new Scene(start_layout, 300, 200));
+            primaryStage.setScene(new Scene(start_layout, 600, 400));
             primaryStage.show();
         }
     }
