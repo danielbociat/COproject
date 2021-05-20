@@ -25,6 +25,12 @@ public class CPUFixedVsFloatingPoint implements IBenchmark {
 
 				break;
 
+			case PHI:
+				benchmark = new DigitsOfPhi(size);
+				benchmark.initialize();
+
+				break;
+
 
 			default:
 				break;
