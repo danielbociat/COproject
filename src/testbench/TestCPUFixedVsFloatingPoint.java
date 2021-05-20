@@ -19,7 +19,7 @@ public class TestCPUFixedVsFloatingPoint {
 		TimeUnit timeUnit = TimeUnit.Milli;
 
 		IBenchmark bench = new CPUFixedVsFloatingPoint();
-		bench.initialize(100, NumberRepresentation.PHI);
+		bench.initialize(100, NumberRepresentation.PI);
 		bench.warmUp();
 
 		timer.start();
