@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uiControllers.InvalidInputPopUpController">
+    <top>
+        <AnchorPane prefHeight="100.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="200.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@UwuntuLogo.png" />
+                    </image>
+                </ImageView>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" style="-fx-text-fill: FF6666;" text="Invalid &#10;input!!" textAlignment="CENTER">
+                    <font>
+                        <Font name="Bradley Hand ITC" size="36.0" />
+                    </font>
+                </Label>
+            </children></AnchorPane>
+    </top>
+    <bottom>
+        <AnchorPane prefHeight="100.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="okButton" alignment="CENTER" layoutX="90.0" layoutY="20.0" mnemonicParsing="false" onAction="#okButtonOnActon" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: FF9999;" text="ok">
+                    <font>
+                        <Font name="Bradley Hand ITC" size="24.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </bottom>
+</BorderPane>
