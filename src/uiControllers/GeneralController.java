@@ -146,10 +146,6 @@ public class GeneralController {
 
         long time = timer.stop();
         log.writeTime("Finished in", time, timeUnit);
-
-        bench.clean();
-        log.close();
-        log.writeTime("Finished in", time, timeUnit);
         bench.clean();
         log.close();
         return time;
