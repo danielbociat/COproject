@@ -1,11 +1,14 @@
 package uiControllers;
 
 import javafx.animation.PauseTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Modality;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -66,13 +69,14 @@ public class GeneralController {
                 FXMLLoader loader = new FXMLLoader(resource);
                 Parent layout = loader.load(resource);
 
+                Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+
                 Stage newStage = new Stage();
                 newStage.setScene(new Scene(layout, 300, 200));
-                newStage.setX(currentStage.getX() + currentStage.getWidth() + 5);
-                newStage.setY(currentStage.getY());
-                newStage.setTitle("Sure?");
+                newStage.setTitle("Are you sure?");
                 newStage.initModality(Modality.APPLICATION_MODAL);
                 newStage.showAndWait();
+                newStage.centerOnScreen();
 
                 result = PopUpController.result;
             }
@@ -87,4 +91,19 @@ public class GeneralController {
         Stage stage = (Stage) button.getScene().getWindow();
         stage.close();
     }
+
+    public void exitWithPopUp(Button button) {
+        if(popUpAnswer(button))
+            exit(button);
+    }
+
+    public void back(Button button) {
+        changeWindow(button, "StartWindow.fxml", 600, 400);
+    }
+
+    public void backWithPopUp(Button button) {
+        if(popUpAnswer(button))
+            back(button);
+    }
+
 }
