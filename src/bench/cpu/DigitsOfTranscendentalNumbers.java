@@ -61,12 +61,11 @@ public class DigitsOfTranscendentalNumbers implements IBenchmark {
 
 				break;
 
-
 			default:
 				break;
 		}
 		benchmarkWarmUp.run();
-		System.out.println();
+		System.out.println("Warm-up done");
 	}
 
 	@Override
