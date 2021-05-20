@@ -9,7 +9,7 @@ public class PopUpController extends GeneralController{
     @FXML
     private Button noButton;
 
-    public static boolean result = true;
+    public static boolean result = false;
 
     public void initialize() {
         initButton(yesButton);

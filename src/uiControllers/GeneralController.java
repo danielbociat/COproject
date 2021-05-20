@@ -31,7 +31,7 @@ public class GeneralController {
             if (resource != null) {
                 Parent layout = FXMLLoader.load(resource);
                 Stage stage = (Stage) button.getScene().getWindow();
-                PauseTransition delay = new PauseTransition(Duration.seconds(1));
+                PauseTransition delay = new PauseTransition(Duration.seconds(0.5));
                 delay.setOnFinished(e -> stage.setScene(new Scene(layout, width, height)));
                 delay.play();
             }
@@ -62,6 +62,7 @@ public class GeneralController {
 
     public boolean popUpAnswer(Button button) {
         boolean result = false;
+        PopUpController.result = false;
         try {
             URL resource = getClass().getClassLoader().getResource("PopUpWindow.fxml");
             Stage currentStage = (Stage) button.getScene().getWindow();
@@ -106,4 +107,7 @@ public class GeneralController {
             back(button);
     }
 
+    public boolean checkInput(String string) {
+        return string.length() > 0 && string.length() < 7 && string.matches("[0-9]*");
+    }
 }
