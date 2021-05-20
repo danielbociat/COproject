@@ -46,11 +46,10 @@ public class GeneralController {
                 Parent layout = FXMLLoader.load(resource);
                 Stage newStage = new Stage();
                 newStage.setScene(new Scene(layout, width, height));
-                newStage.initModality(Modality.APPLICATION_MODAL);
                 newStage.setX(currentStage.getX() + currentStage.getWidth() + 5);
                 newStage.setY(currentStage.getY());
                 newStage.setTitle(title);
-                newStage.showAndWait();
+                newStage.show();
             }
         }
         catch (Exception e) {
@@ -58,8 +57,30 @@ public class GeneralController {
         }
     }
 
-    public void popUp(Button button) {
-        openNewWindow(button, "PopUpWindow.fxml", 300, 200, "Sure?");
+    public boolean popUpAnswer(Button button) {
+        boolean result = false;
+        try {
+            URL resource = getClass().getClassLoader().getResource("PopUpWindow.fxml");
+            Stage currentStage = (Stage) button.getScene().getWindow();
+            if (resource != null) {
+                FXMLLoader loader = new FXMLLoader(resource);
+                Parent layout = loader.load(resource);
+
+                Stage newStage = new Stage();
+                newStage.setScene(new Scene(layout, 300, 200));
+                newStage.setX(currentStage.getX() + currentStage.getWidth() + 5);
+                newStage.setY(currentStage.getY());
+                newStage.setTitle("Sure?");
+                newStage.initModality(Modality.APPLICATION_MODAL);
+                newStage.showAndWait();
+
+                result = PopUpController.result;
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
     public void exit(Button button) {

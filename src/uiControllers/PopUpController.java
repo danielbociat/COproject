@@ -2,8 +2,6 @@ package uiControllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 
 public class PopUpController extends GeneralController{
     @FXML
@@ -11,18 +9,20 @@ public class PopUpController extends GeneralController{
     @FXML
     private Button noButton;
 
+    public static boolean result = true;
+
     public void initialize() {
         initButton(yesButton);
         initButton(noButton);
     }
 
     public void yesButtonOnActon() {
-        System.out.println("Yes");
+        result = true;
         exit(yesButton);
     }
 
     public void noButtonOnActon() {
-        System.out.println("No");
+        result = false;
         exit(noButton);
     }
 }
