@@ -48,12 +48,12 @@ public class DigitsOfE implements IBenchmark {
                 System.out.print(".");
                 System.out.print(quotient%10);
             }
-            else
-            System.out.print(quotient);
+//            else
+//            System.out.print(quotient);
 
 
         }
-        System.out.println();
+        System.out.println("finished");
     }
 
     @Override

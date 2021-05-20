@@ -43,6 +43,7 @@ public class CPUFixedVsFloatingPoint implements IBenchmark {
 	@Override
 	@Deprecated	
 	public void run() {
+		System.out.println("thread started");
 		benchmark.run();
 
 	}

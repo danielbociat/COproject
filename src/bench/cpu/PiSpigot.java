@@ -111,7 +111,6 @@ public class PiSpigot implements IBenchmark {
             // System.out.flush();
         }
         flushDigits();
-        System.out.println();
     }
 
     @Override
@@ -137,7 +136,6 @@ public class PiSpigot implements IBenchmark {
 
     // write the buffered digits
     void flushDigits() {
-        System.out.append(predigits);
         predigits.setLength(0);
     }
 
