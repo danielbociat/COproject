@@ -5,7 +5,6 @@ import bench.IBenchmark;
 public class DigitsOfE implements IBenchmark {
     private int digits_requested;
     private int[] digits;
-    private StringBuilder predigits = new StringBuilder();
     private int quotient;
 
     public DigitsOfE(int req){
@@ -33,10 +32,10 @@ public class DigitsOfE implements IBenchmark {
     @Override
     public void run() {
 
-        for(int i=0; i< digits_requested-1; i++) {
-            for(int j=0; j< digits_requested+1; j++)
+        for(int i=0; i< digits.length-1; i++) {
+            for(int j=0; j< digits.length; j++)
                 digits[j] *= 10;
-            for(int j=digits_requested; j>=1; j--){
+            for(int j=digits.length-1; j>=1; j--){
                 quotient = digits[j] / (j+1);
                 digits[j] %= (j+1);
                 digits[j-1] += quotient;

@@ -15,7 +15,7 @@ public class CPUFixedVsFloatingPoint implements IBenchmark {
 
 		switch ((NumberRepresentation) params[1]) {
 			case PI:
-				benchmark = new PiSpigot(size);
+				benchmark = new DigitsOfPi(size);
 				benchmark.initialize();
 				break;
 
