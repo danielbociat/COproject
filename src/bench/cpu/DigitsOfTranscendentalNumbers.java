@@ -1,9 +1,8 @@
 package bench.cpu;
 
 import bench.IBenchmark;
-import bench.cpu.PiSpigot;
 
-public class CPUFixedVsFloatingPoint implements IBenchmark {
+public class DigitsOfTranscendentalNumbers implements IBenchmark {
 
 	private double result;
 	private int size;

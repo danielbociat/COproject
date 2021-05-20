@@ -1,10 +1,9 @@
 package uiControllers;
 
 import bench.IBenchmark;
-import bench.cpu.CPUFixedVsFloatingPoint;
+import bench.cpu.DigitsOfTranscendentalNumbers;
 import bench.cpu.NumberRepresentation;
 import javafx.animation.PauseTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
@@ -128,7 +127,7 @@ public class GeneralController {
         ILog log = /* new FileLogger("bench.log"); */new ConsoleLogger();
         TimeUnit timeUnit = TimeUnit.Milli;
 
-        IBenchmark bench = new CPUFixedVsFloatingPoint();
+        IBenchmark bench = new DigitsOfTranscendentalNumbers();
         if(c == "PI")
         {
             bench.initialize(digits, NumberRepresentation.PI);
