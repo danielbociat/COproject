@@ -8,7 +8,7 @@ public class DigitsOfE implements IBenchmark {
     private int quotient;
 
     public DigitsOfE(int req){
-        this.digits_requested = req + 1;
+        this.digits_requested = req;
     }
 
     // Allocate digits[]

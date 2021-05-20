@@ -62,11 +62,8 @@ public class DigitsOfPhi implements IBenchmark{
                     System.out.format("%03d", d/a);
                 }
             }
-
-
-
-            //printf("%.3d",d/a);
         }
+        System.out.println();
     }
 
     @Override

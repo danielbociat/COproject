@@ -6,9 +6,7 @@ import logging.TimeUnit;
 import timing.ITimer;
 import timing.Timer;
 import bench.IBenchmark;
-//import bench.cpu.CPUFixedPoint;
 import bench.cpu.DigitsOfTranscendentalNumbers;
-//import bench.cpu.CPUNumberRepresentation;
 import bench.cpu.NumberRepresentation;
 
 public class TestDigitsOfTranscendentalNumbers {
@@ -27,7 +25,7 @@ public class TestDigitsOfTranscendentalNumbers {
 		bench.run();
 
 		long time = timer.stop();
-		log.writeTime("Finished in", time, timeUnit);
+		//log.writeTime("Finished in", time, timeUnit);
 
 		bench.clean();
 		log.close();
