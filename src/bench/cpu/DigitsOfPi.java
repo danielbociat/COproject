@@ -6,7 +6,6 @@ public class DigitsOfPi implements IBenchmark {
     private int digits_requested;
     private int[] digits;
     private StringBuilder predigits = new StringBuilder();
-    private int quotient;
 
     public DigitsOfPi(int req){
         this.digits_requested = req + 1;
@@ -55,7 +54,7 @@ public class DigitsOfPi implements IBenchmark {
     // Produce digits
     @Override
     public void run() {
-        for(int i=0; i< digits.length-1; i++){
+        for(int i=0; i< digits_requested; i++){
 
             int carry = 0;
             for (int j=digits.length-1; j > 0; j--) {
