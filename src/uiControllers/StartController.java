@@ -22,8 +22,7 @@ public class StartController extends GeneralController{
     }
 
     public void exitButtonOnAction(ActionEvent event) {
-        if (popUpAnswer(exitButton))
-            exit(exitButton);
+        exitWithPopUp(exitButton);
     }
 
     public void eButtonOnAction(ActionEvent event) {
