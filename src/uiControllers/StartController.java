@@ -27,14 +27,14 @@ public class StartController extends GeneralController{
     }
 
     public void eButtonOnAction(ActionEvent event) {
-        System.out.println("E");
+        changeWindow(eButton, "EWindow.fxml", 600, 400);
     }
 
     public void piButtonOnAction(ActionEvent event) {
-        System.out.println("PI");
+        changeWindow(eButton, "PiWindow.fxml", 600, 400);
     }
 
     public void phiButtonOnAction(ActionEvent event) {
-        System.out.println("PHI");
+        changeWindow(eButton, "PhiWindow.fxml", 600, 400);
     }
 }
