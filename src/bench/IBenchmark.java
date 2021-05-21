@@ -25,8 +25,9 @@ public interface IBenchmark {
 	 * Calls the actual benchmarking algorithm, optionally after <b>initialize</b>
 	 * was called. <br>
 	 * This call should be benchmarked.
-	 */
-	public void run();
+     * @return
+     */
+	public String run();
 
 	/**
 	 * Calls the actual benchmarking algorithm, optionally after <b>initialize</b>

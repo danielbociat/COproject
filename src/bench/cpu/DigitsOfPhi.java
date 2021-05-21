@@ -33,8 +33,8 @@ public class DigitsOfPhi implements IBenchmark{
     }
 
     @Override
-    public void run() {
-
+    public String run() {
+        String toDisplay = "";
         for(int i = 0; i != n; digits[0]=d%a,i++){
             for(d=0, k=c; --k != 0; d/=b, d *= 2 * k - 1){
                 d+= a * digits[k];
@@ -51,19 +51,19 @@ public class DigitsOfPhi implements IBenchmark{
 
                 String format = new String("%0" + String.valueOf(digits) + "d");
 
-                System.out.format(format, d/a/num);
+                toDisplay += String.format(format, d/a/num);
 
             }
             else{
                 if(i == 0){
-                    System.out.format("%d.", d/a);
+                    toDisplay += String.format("%d.", d/a);
                 }
                 else{
-                    System.out.format("%03d", d/a);
+                    toDisplay += String.format("%03d", d/a);
                 }
             }
         }
-        System.out.println();
+        return toDisplay;
     }
 
     @Override

@@ -70,9 +70,8 @@ public class DigitsOfTranscendentalNumbers implements IBenchmark {
 
 	@Override
 	@Deprecated	
-	public void run() {
-		benchmark.run();
-
+	public String run() {
+		return benchmark.run();
 	}
 
 	@Override
