@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import java.lang.Math;
 
 public class AlgoController extends GeneralController{
     @FXML
@@ -54,7 +55,7 @@ public class AlgoController extends GeneralController{
 
             String timeString = String.format("%.4f", time);
             timeLabel.setText(timeString + " mili");
-            String scoreString = String.format("%.0f", numDigits/time);
+            String scoreString = String.format("%.0f", numDigits/Math.sqrt(time));
             scoreLabel.setText(scoreString);
 
             if(displaying) {
