@@ -13,6 +13,8 @@ public class StartController extends GeneralController{
     private Button piButton;
     @FXML
     private Button phiButton;
+    @FXML
+    private Button reaperButton;
 
     public void initialize() {
         initButton(exitButton);
@@ -38,5 +40,9 @@ public class StartController extends GeneralController{
     public void phiButtonOnAction(ActionEvent event) {
         AlgoController.algo = "PHI";
         changeWindow(eButton, "AlgoWindow.fxml", 600, 400);
+    }
+
+    public void reaperButtonOnAction() {
+        changeWindow(reaperButton, "ReaperWindow.fxml", 600, 400);
     }
 }

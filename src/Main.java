@@ -18,7 +18,7 @@ public class Main extends Application {
         if (resource != null) {
             Parent start_layout = FXMLLoader.load(resource);
             //noinspection SpellCheckingInspection
-            primaryStage.setTitle("Uwuntu App");
+            primaryStage.setTitle("Uwuntu Benchmark");
             primaryStage.setScene(new Scene(start_layout, 600, 400));
             primaryStage.show();
         }
