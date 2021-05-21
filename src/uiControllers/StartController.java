@@ -26,14 +26,17 @@ public class StartController extends GeneralController{
     }
 
     public void eButtonOnAction(ActionEvent event) {
-        changeWindow(eButton, "EWindow.fxml", 600, 400);
+        AlgoController.algo = "E";
+        changeWindow(eButton, "AlgoWindow.fxml", 600, 400);
     }
 
     public void piButtonOnAction(ActionEvent event) {
-        changeWindow(eButton, "PiWindow.fxml", 600, 400);
+        AlgoController.algo = "PI";
+        changeWindow(eButton, "AlgoWindow.fxml", 600, 400);
     }
 
     public void phiButtonOnAction(ActionEvent event) {
-        changeWindow(eButton, "PhiWindow.fxml", 600, 400);
+        AlgoController.algo = "PHI";
+        changeWindow(eButton, "AlgoWindow.fxml", 600, 400);
     }
 }

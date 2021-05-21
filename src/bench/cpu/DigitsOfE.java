@@ -30,8 +30,8 @@ public class DigitsOfE implements IBenchmark {
 
     // Produce digits
     @Override
-    public void run() {
-
+    public String run() {
+        String toDisplay = "";
         for(int i=0; i< digits.length-1; i++) {
             for(int j=0; j< digits.length; j++)
                 digits[j] *= 10;
@@ -43,16 +43,16 @@ public class DigitsOfE implements IBenchmark {
             quotient = digits[0];
             digits[0] %= 1;
             if(i==0) {
-                System.out.print(quotient/10);
-                System.out.print(".");
-                System.out.print(quotient%10);
+                toDisplay += String.valueOf(quotient/10);
+                toDisplay += ".";
+                toDisplay += String.valueOf(quotient%10);
             }
             else
-            System.out.print(quotient);
+            toDisplay += String.valueOf(quotient);
 
 
         }
-        System.out.println();
+        return toDisplay;
     }
 
     @Override

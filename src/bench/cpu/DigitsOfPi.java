@@ -6,6 +6,7 @@ public class DigitsOfPi implements IBenchmark {
     private int digits_requested;
     private int[] digits;
     private StringBuilder predigits = new StringBuilder();
+    private String toDisplay = "";
 
     public DigitsOfPi(int req){
         this.digits_requested = req + 1;
@@ -27,7 +28,7 @@ public class DigitsOfPi implements IBenchmark {
     }
 
     void flushDigits() {
-        System.out.append(predigits);
+        toDisplay += (predigits);
         predigits.setLength(0);
     }
 
@@ -53,7 +54,7 @@ public class DigitsOfPi implements IBenchmark {
 
     // Produce digits
     @Override
-    public void run() {
+    public String run() {
         for(int i=0; i< digits_requested; i++){
 
             int carry = 0;
@@ -74,7 +75,7 @@ public class DigitsOfPi implements IBenchmark {
             if (quotient < 9) {
                 flushDigits();
                 // print a decimal after the leading "3"
-                if (i == 1) System.out.print(".");
+                if (i == 1) toDisplay += ".";
                 addDigit(quotient);
             } else if (quotient == 9) {
                 addDigit(quotient);
@@ -87,6 +88,7 @@ public class DigitsOfPi implements IBenchmark {
         }
         flushDigits();
         System.out.println();
+        return toDisplay;
     }
 
     @Override
