@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uiControllers.AlgoController">
+    <top>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <Pane layoutX="15.0" layoutY="20.0" opacity="0.43" prefHeight="360.0" prefWidth="570.0" style="-fx-background-color: #a6a6a6;" />
+            <Button fx:id="backButton" alignment="CENTER" cancelButton="true" layoutX="30.0" layoutY="310.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#backButtonOnAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: FF9999;" text="back">
+                <font>
+                    <Font name="Bradley Hand ITC" size="24.0" />
+                </font>
+            </Button>
+            <Button fx:id="runButton" alignment="CENTER" defaultButton="true" layoutX="200.0" layoutY="310.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#runButtonOnAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: FF9999;" text="run">
+                <font>
+                    <Font name="Bradley Hand ITC" size="24.0" />
+                </font>
+            </Button>
+            <ImageView fitHeight="125.0" fitWidth="125.0" layoutX="475.0" layoutY="275.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@UwuntuLogo.png" />
+                </image>
+            </ImageView>
+            <Label fx:id="algoLabel" alignment="CENTER" layoutX="20.0" layoutY="25.0" prefHeight="60.0" prefWidth="300.0" style="-fx-text-fill: FF6666" text="didgits of E" textAlignment="CENTER" textOverrun="CLIP" underline="true">
+                <font>
+                    <Font name="Bradley Hand ITC" size="40.0" />
+                </font>
+            </Label>
+            <TextField fx:id="textField" layoutX="100.0" layoutY="100.0" prefHeight="30.0" prefWidth="150.0">
+            <font>
+               <Font name="Eras Light ITC" size="14.0" />
+            </font></TextField>
+         <Button fx:id="displayButton" alignment="CENTER" cancelButton="true" layoutX="350.0" layoutY="35.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#displayButtonOnAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: FF9999;" text="display">
+            <font>
+               <Font name="Bradley Hand ITC" size="24.0" />
+            </font>
+         </Button>
+         <Label alignment="CENTER" layoutX="25.0" layoutY="90.0" prefHeight="50.0" prefWidth="75.0" style="-fx-text-fill: FF6666;" text="digits">
+            <font>
+               <Font name="Bradley Hand ITC" size="24.0" />
+            </font>
+         </Label>
+         <Label alignment="CENTER" layoutX="25.0" layoutY="150.0" prefHeight="50.0" prefWidth="75.0" style="-fx-text-fill: FF6666;" text="time">
+            <font>
+               <Font name="Bradley Hand ITC" size="24.0" />
+            </font>
+         </Label>
+         <Label alignment="CENTER" layoutX="25.0" layoutY="210.0" prefHeight="50.0" prefWidth="75.0" style="-fx-text-fill: FF6666;" text="score">
+            <font>
+               <Font name="Bradley Hand ITC" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="timeLabel" alignment="CENTER" layoutX="100.0" layoutY="150.0" prefHeight="50.0" prefWidth="150.0" style="-fx-text-fill: FF6666;">
+            <font>
+               <Font name="Bradley Hand ITC" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="scoreLabel" alignment="CENTER" layoutX="100.0" layoutY="210.0" prefHeight="50.0" prefWidth="150.0" style="-fx-text-fill: FF6666;">
+            <font>
+               <Font name="Bradley Hand ITC" size="24.0" />
+            </font>
+         </Label>
+         <TextArea fx:id="textArea" editable="false" layoutX="300.0" layoutY="100.0" prefHeight="150.0" prefWidth="250.0" scrollLeft="2.0" wrapText="true">
+            <font>
+               <Font name="Eras Light ITC" size="18.0" />
+            </font></TextArea>
+        </AnchorPane>
+    </top>
+</BorderPane>
