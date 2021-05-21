@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uiControllers.ReaperController">
+    <top>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <Pane layoutX="15.0" layoutY="20.0" opacity="0.43" prefHeight="360.0" prefWidth="570.0" style="-fx-background-color: #202020;" />
+            <Button fx:id="backButton" alignment="CENTER" cancelButton="true" layoutX="30.0" layoutY="310.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#backButtonOnAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #006835;" text="Back">
+                <font>
+                    <Font name="Chiller" size="20.0" />
+                </font>
+            </Button>
+            <Button fx:id="runButton" alignment="CENTER" defaultButton="true" layoutX="200.0" layoutY="310.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#runButtonOnAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #006835;" text="Run">
+                <font>
+                    <Font name="Chiller" size="20.0" />
+                </font>
+            </Button>
+            <ImageView fitHeight="125.0" fitWidth="125.0" layoutX="475.0" layoutY="275.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@UwuntuInverted.png" />
+                </image>
+            </ImageView>
+            <Label fx:id="algoLabel" alignment="CENTER" layoutX="20.0" layoutY="25.0" prefHeight="60.0" prefWidth="560.0" style="-fx-text-fill: #006835;" text="Thread Reaper" textAlignment="CENTER" textOverrun="CLIP">
+                <font>
+                    <Font name="Chiller" size="50.0" />
+                </font>
+            </Label>
+            <TextField fx:id="digitsField" layoutX="110.0" layoutY="120.0" prefHeight="30.0" prefWidth="150.0">
+                <font>
+                    <Font name="Eras Light ITC" size="14.0" />
+                </font></TextField>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="110.0" prefHeight="50.0" prefWidth="75.0" style="-fx-text-fill: #006835;" text="Digits">
+                <font>
+                    <Font name="Chiller" size="36.0" />
+                </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="170.0" prefHeight="50.0" prefWidth="75.0" style="-fx-text-fill: #006835;" text="Time">
+                <font>
+                    <Font name="Chiller" size="36.0" />
+                </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="230.0" prefHeight="50.0" prefWidth="75.0" style="-fx-text-fill: #006835;" text="Score">
+                <font>
+                    <Font name="Chiller" size="36.0" />
+                </font>
+            </Label>
+            <Label fx:id="timeLabel" alignment="CENTER" layoutX="100.0" layoutY="170.0" prefHeight="50.0" prefWidth="150.0" style="-fx-text-fill: FF6666;">
+                <font>
+                    <Font name="Chiller" size="36.0" />
+                </font>
+            </Label>
+            <Label fx:id="scoreLabel" alignment="CENTER" layoutX="100.0" layoutY="230.0" prefHeight="50.0" prefWidth="150.0" style="-fx-text-fill: FF6666;">
+                <font>
+                    <Font name="Chiller" size="36.0" />
+                </font>
+            </Label>
+         <Label alignment="CENTER" layoutX="300.0" layoutY="100.0" prefHeight="50.0" prefWidth="125.0" style="-fx-text-fill: #006835;" text="Threads">
+            <font>
+               <Font name="Chiller" size="36.0" />
+            </font>
+         </Label>
+         <TextField fx:id="threadField" layoutX="430.0" layoutY="120.0" prefHeight="30.0" prefWidth="100.0">
+            <font>
+               <Font name="Eras Light ITC" size="14.0" />
+            </font>
+         </TextField>
+        </AnchorPane>
+    </top>
+</BorderPane>
