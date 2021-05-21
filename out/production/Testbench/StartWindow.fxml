@@ -14,7 +14,7 @@
                   <Image url="@UwuntuLogo.png" />
                </image>
             </ImageView>
-            <Button fx:id="reaperButton" layoutX="200.0" layoutY="216.0" maxHeight="90.0" maxWidth="176.0" minHeight="5.0" minWidth="5.0" mnemonicParsing="false" onAction="#reaperButtonOnAction" prefHeight="8.0" prefWidth="8.0" style="-fx-background-color: #331a00;" />
+            <Button fx:id="reaperButton" layoutX="200.0" layoutY="217.0" maxHeight="90.0" maxWidth="176.0" minHeight="5.0" minWidth="5.0" mnemonicParsing="false" onAction="#reaperButtonOnAction" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: #331a00;" />
          </children>
       </AnchorPane>
    </left>

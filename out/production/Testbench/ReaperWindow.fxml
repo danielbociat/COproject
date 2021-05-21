@@ -19,7 +19,7 @@
                     <Font name="Chiller" size="20.0" />
                 </font>
             </Button>
-            <ImageView fitHeight="125.0" fitWidth="125.0" layoutX="475.0" layoutY="275.0" opacity="0.7" pickOnBounds="true" preserveRatio="true" style="-fx-image: invert;">
+            <ImageView fitHeight="125.0" fitWidth="125.0" layoutX="475.0" layoutY="275.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
                 <image>
                     <Image url="@UwuntuInverted.png" />
                 </image>
