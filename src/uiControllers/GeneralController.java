@@ -27,6 +27,7 @@ public class GeneralController {
     protected static final String HOVERED_BUTTON_STYLE = "-fx-background-color: #FFCCCC";
 
     public boolean isRunning = false;
+    protected String toDisplay;
 
     public void initButton(Button button) {
         if(isRunning == false) {
@@ -142,7 +143,7 @@ public class GeneralController {
         }
         bench.warmUp();
         timer.start();
-        bench.run();
+        toDisplay = bench.run();
 
         long time = timer.stop();
         log.writeTime("Finished in", time, timeUnit);
