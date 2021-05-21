@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uiControllers.StartController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@UwuntuLogo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="reaperButton" layoutX="200.0" layoutY="216.0" maxHeight="90.0" maxWidth="176.0" minHeight="5.0" minWidth="5.0" mnemonicParsing="false" onAction="#reaperButtonOnAction" prefHeight="8.0" prefWidth="8.0" style="-fx-background-color: #331a00;" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-text-fill: FF6666;" text="Uwuntu&#10;Benchmark" textAlignment="CENTER">
+               <font>
+                  <Font name="Bradley Hand ITC" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="eButton" alignment="CENTER" layoutX="10.0" layoutY="122.0" mnemonicParsing="false" onAction="#eButtonOnAction" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FF9999;" text="e">
+               <font>
+                  <Font name="Times New Roman" size="28.0" />
+               </font>
+            </Button>
+            <Button fx:id="piButton" alignment="CENTER" layoutX="10.0" layoutY="191.0" mnemonicParsing="false" onAction="#piButtonOnAction" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FF9999;" text="π">
+               <font>
+                  <Font name="Bradley Hand ITC" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="phiButton" alignment="CENTER" layoutX="10.0" layoutY="259.0" mnemonicParsing="false" onAction="#phiButtonOnAction" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FF9999;" text="φ">
+               <font>
+                  <Font name="Bradley Hand ITC" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="exitButton" alignment="CENTER" layoutX="10.0" layoutY="329.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FF9999;" text="Exit">
+               <font>
+                  <Font name="Bradley Hand ITC" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
