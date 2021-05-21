@@ -31,7 +31,7 @@
             </Label>
             <TextField fx:id="textField" layoutX="100.0" layoutY="100.0" prefHeight="30.0" prefWidth="150.0">
             <font>
-               <Font name="Arial" size="14.0" />
+               <Font name="Eras Light ITC" size="14.0" />
             </font></TextField>
          <Button fx:id="displayButton" alignment="CENTER" cancelButton="true" layoutX="350.0" layoutY="35.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#displayButtonOnAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: FF9999;" text="display">
             <font>
@@ -63,9 +63,9 @@
                <Font name="Bradley Hand ITC" size="24.0" />
             </font>
          </Label>
-         <TextArea fx:id="textArea" editable="false" layoutX="300.0" layoutY="100.0" prefHeight="150.0" prefWidth="250.0" scrollLeft="1.0" wrapText="true">
+         <TextArea fx:id="textArea" editable="false" layoutX="300.0" layoutY="100.0" prefHeight="150.0" prefWidth="250.0" scrollLeft="2.0" wrapText="true">
             <font>
-               <Font name="Arial" size="18.0" />
+               <Font name="Eras Light ITC" size="18.0" />
             </font></TextArea>
         </AnchorPane>
     </top>
