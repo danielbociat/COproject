@@ -1,0 +1,1 @@
+java -jar out\artifacts\Testbench_jar\Testbench.jar
